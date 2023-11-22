@@ -1,0 +1,74 @@
+@keyframes relleno 
+{
+    0% {fill: plum; left: 0px; top: 0px;}
+    25% {fill: yellow; left: 50px; top: -50px;}
+    50% {fill: hotpink; left: 100px; top: 0px;}
+    75% {fill: rgb(0, 225, 255); left: 150px; top: -50px;}
+    100% {fill: orange; left: 200px; top: 0px;}
+    125% {fill: palegreen; left: 250px; top: -50px;}
+}
+
+@keyframes rotacion
+{
+    from {transform: rotate(20deg);}
+    to {transform: rotate(360deg);}
+}
+  
+body
+{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.container
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#star
+{
+    width: 150px;
+    fill: palegreen;
+    stroke: black;
+    stroke-width: 4px;
+    position: relative;
+    animation-name: relleno;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#star .ojos
+{
+    fill: black;
+    stroke-width: 0px;
+}
+
+#rayo
+{
+    width: 150px;
+    fill: cornflowerblue;
+    transition: width 2s;
+    transition-timing-function: ease-out;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+#rayo:hover
+{
+    width: 300px;
+}
+
+#cake
+{
+    width: 150px;
+    fill: bisque;
+    stroke: black;
+    stroke-width: 1px;
+    animation: rotacion 3s linear .5s infinite forwards;
+}
